@@ -17,13 +17,13 @@ char get_key() {
   return NULL;
 }
 
-char get_key_blocking() {
+char get_key_blocking(unsigned long timeout) {
   char key = NULL;
-
+  unsigned long start = micros();
   while (key == NULL) {
+    if (timeout != 0 && start - timeout <= 0) return NULL;
     delay(10);
     key = get_key();
   }
-
   return key;
 }

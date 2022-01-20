@@ -49,7 +49,7 @@ int scene_last_ride() {
   int input_offset = question_yend + 24;
   while(true) {
     draw_input(input, input_offset);
-    char next_key = get_key_blocking();
+    char next_key = get_key_blocking(0);
 
     if (is_number(next_key)) input[strlen(input)] = next_key;
     else if (next_key == '#') {
@@ -70,7 +70,7 @@ int scene_release_key() {
   draw_button((button){'D', "Abbrechen"}, (pos){160, 170});
 
   while (true) {
-    char next = get_key_blocking();
+    char next = get_key_blocking(0);
     if (next == '*') return 1;
     if (next == 'D') return 0;
   }
