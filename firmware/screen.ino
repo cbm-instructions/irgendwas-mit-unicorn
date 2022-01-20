@@ -9,6 +9,7 @@ void init_screen() {
   uint16_t identifier = tft.readID();
   tft.begin(identifier);
   tft.setRotation(3);
+  randomSeed(analogRead(8));
 
   Serial.println("Screen initialized");
 }
@@ -114,6 +115,28 @@ int draw_text(const char* text) {
   tft.setCursor(15, 20 + line_num * 24);
   tft.print(line);
   return 20 + (line_num + 1) * 24;
+}
+
+int draw_tree(int depth) {
+  clear();
+  draw_branch(depth, (pos){160, 240}, 0.0, 40);
+}
+
+int draw_branch(int depth, pos start, float rad, float len) {
+  if (depth == 0) {
+    tft.fillCircle(start.x, start.y, random(5, 15), GREEN);
+    return 0;
+  };
+  float r_len = len + 10 * (random(-100, 100) / 100.0);
+  int new_x = start.x + (r_len * sin(rad));
+  int new_y = start.y - (r_len * cos(rad));
+  tft.drawLine(start.x, start.y, new_x, new_y, BROWN);
+
+  int num_next_branches = random(2, 4);
+  for (int i = 0; i < num_next_branches; i++){
+    draw_branch(depth - 1, (pos){new_x, new_y}, rad + random(-100, 100) / 100.0, len);
+  }
+  return 0;
 }
 
 void clear() {

@@ -17,6 +17,7 @@
 #define YELLOW  0xFFE0
 #define WHITE   0xFFFF
 #define GREY    0x56b5
+#define BROWN   0xB40B
 
 typedef struct {
   char content;

@@ -21,6 +21,8 @@ void setup(void) {
 
 
 void loop(void) {
+  draw_tree(5);
+  get_key_blocking(0);
   if (scene_last_ride()) {
     if (scene_release_key()) {
       digitalWrite(LED_BUILTIN, HIGH);

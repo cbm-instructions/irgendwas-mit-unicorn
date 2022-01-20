@@ -18,7 +18,7 @@ byte colPins[COLS] = {44, 45, 46, 47}; //connect to the column pinouts of the ke
 
 void init_input();
 char get_key();
-char get_key_blocking();
+char get_key_blocking(unsigned long timeout);
 
 int is_number(char input) {
   return (input >= 48 && input <= 57);
