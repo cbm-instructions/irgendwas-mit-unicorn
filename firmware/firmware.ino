@@ -42,7 +42,7 @@ void scene_open_countdown() {
     clear();
     draw_center_char(i + 48);
     draw_button((button){'D', "Abbrechen"}, (pos){160, 190});
-    int start = millis();
+    unsigned long start = millis();
     while (millis() < start + 1000) {
       if (get_key_blocking(start + 1000 - millis()) == 'D') return;
     }
