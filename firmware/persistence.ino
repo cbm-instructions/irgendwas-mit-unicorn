@@ -20,9 +20,10 @@ void clear_days() {
   Serial.println("Days cleared");
 }
 
-void inc_day(int day) {
+int inc_day(int day) {
   data.days[day - 1] += 1;
   EEPROM.put(MEMORY_START, data);
+  return data.days[day -1];
 }
 
 int* get_days() {
@@ -31,6 +32,10 @@ int* get_days() {
 
 int get_day(int day) {
   return data.days[day -1];
+}
+
+void set_day(int day, int num) {
+  data.days[day - 1] = num;
 }
 
 int num_days(int month) {
@@ -42,4 +47,15 @@ int num_days(int month) {
     if (month % 2 == 0) return 31;
     return 30;
   }
+}
+
+float intensity() {
+  int acc = 0;
+  for (int i = 1; i <= day(); i++) {
+    int val = get_day(i);
+    if (val >= 2) acc += 2;
+    else acc + val;
+  }
+
+  return 1 - (acc / (day() * 2.0));
 }

@@ -1,4 +1,5 @@
 #include <Adafruit_TFTLCD.h> // Hardware-specific library
+#include "persistence.h"
 
 #define BUFF_SIZE 1024
 
@@ -87,6 +88,14 @@ void draw_button(button b, pos offset) {
   tft.print(b.label);
 }
 
+int draw_center_char(char num) {
+  tft.setCursor(130,80);
+  tft.setTextColor(BLACK);
+  tft.setTextSize(10);
+
+  tft.print(num);
+}
+
 int draw_text(const char* text) {
   int max_len = 24;
   tft.setTextSize(2);
@@ -122,12 +131,23 @@ int draw_tree(int depth) {
   draw_branch(depth, (pos){160, 240}, 0.0, 40);
 }
 
+int select_random(int a, int b) {
+  if (random(0,2)) return a;
+  else return b;
+}
+
 int draw_branch(int depth, pos start, float rad, float len) {
+  float percent = intensity() * (random(80, 100) / 100.);
+
   if (depth == 0) {
-    tft.fillCircle(start.x, start.y, random(5, 15), GREEN);
+    int color;
+    color += ((int)(percent * 63) << 5);
+    color += ((int)((1.0 -percent) * 31) << 11);
+    
+    tft.fillCircle(start.x, start.y, random(5, 15), color);
     return 0;
   };
-  float r_len = len + 10 * (random(-100, 100) / 100.0);
+  float r_len = len * percent + 10;
   int new_x = start.x + (r_len * sin(rad));
   int new_y = start.y - (r_len * cos(rad));
   tft.drawLine(start.x, start.y, new_x, new_y, BROWN);

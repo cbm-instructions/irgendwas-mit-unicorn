@@ -19,9 +19,9 @@ char get_key() {
 
 char get_key_blocking(unsigned long timeout) {
   char key = NULL;
-  unsigned long start = micros();
+  unsigned long start = millis();
   while (key == NULL) {
-    if (timeout != 0 && start - timeout <= 0) return NULL;
+    if (timeout != 0 && start + timeout <= millis()) return NULL;
     delay(10);
     key = get_key();
   }

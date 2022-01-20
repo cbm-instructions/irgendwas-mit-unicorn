@@ -19,15 +19,14 @@ void setup(void) {
   init_input();
 }
 
-
 void loop(void) {
+  //Serial.println(get_touch().z);
   draw_tree(5);
-  get_key_blocking(0);
-  if (scene_last_ride()) {
-    if (scene_release_key()) {
-      digitalWrite(LED_BUILTIN, HIGH);
-      delay(1000);
-      digitalWrite(LED_BUILTIN, LOW);
+  if (get_key_blocking(60000) != NULL) {
+    if (scene_last_ride()) {
+      if (scene_release_key()) {
+        scene_open_countdown();
+      }
     }
   }
 }
@@ -36,6 +35,22 @@ void draw_common() {
   draw_date();
   draw_dots(get_days(), 200);
 
+}
+
+void scene_open_countdown() {
+  for (int i = 9; i >= 0; i--) {
+    clear();
+    draw_center_char(i + 48);
+    draw_button((button){'D', "Abbrechen"}, (pos){160, 190});
+    int start = millis();
+    while (millis() < start + 1000) {
+      if (get_key_blocking(start + 1000 - millis()) == 'D') return;
+    }
+  }
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000);
+  digitalWrite(LED_BUILTIN, LOW);
+  inc_day(day());
 }
 
 int scene_last_ride() {
