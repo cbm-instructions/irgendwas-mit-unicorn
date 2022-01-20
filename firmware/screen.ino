@@ -52,6 +52,14 @@ void draw_date() {
   tft.print(date_str);
 }
 
+void draw_input(const char* input, int offset) {
+  tft.fillRect(20 + strlen(input) * 12, offset, 320 - 20 - strlen(input) * 12, 16, WHITE);
+  tft.setCursor(20, offset);
+  tft.setTextSize(2);
+  tft.setTextColor(BLACK);
+  tft.print(input);
+}
+
 void draw_dots(const int days[], int offset) {
   int colors[32];
   cover_future_days(colors, map_colors(colors, days));
@@ -78,8 +86,9 @@ void draw_button(button b, pos offset) {
   tft.print(b.label);
 }
 
-void draw_text(const char* text) {
-  int max_len = 23;
+int draw_text(const char* text) {
+  int max_len = 24;
+  tft.setTextSize(2);
 
   char buf[BUFF_SIZE];
   strcpy(buf, text); // copying text to prevent text from beeing overwritten
@@ -92,17 +101,19 @@ void draw_text(const char* text) {
   
   while (ptr != NULL) {
     if (strlen(line) + strlen(ptr) + 1 > max_len) {
-      tft.setCursor(20, 20 + line_num * 24);
+      tft.setCursor(15, 20 + line_num * 24);
       tft.print(line);
       memset(line, 0, BUFF_SIZE);
       line_num++;
     } else {
-      strcat(strcat(line, " "), ptr);
+      if (line[0] != 0) strcat(line, " ");
+      strcat(line, ptr);
       ptr = strtok(NULL, " ");
     }
   }
   tft.setCursor(15, 20 + line_num * 24);
   tft.print(line);
+  return 20 + (line_num + 1) * 24;
 }
 
 void clear() {

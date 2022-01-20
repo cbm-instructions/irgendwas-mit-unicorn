@@ -31,7 +31,7 @@ typedef struct {
 void init_screen();
 void draw_dots(const int days[], int offest);
 void draw_button(button b, pos offest);
-void draw_text(const char* text);
+int draw_text(const char* text);
 void draw_date();
 
 #endif
