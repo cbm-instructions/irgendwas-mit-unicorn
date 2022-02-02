@@ -47,7 +47,7 @@ Wir haben unsere Schnittpläne mit Inkscape erstellt, aber falls du Änderungen 
 Um möglichst wenig Sperrholz zu verbrauchen, haben wir die einzelnen Elemente
 versucht möglichst platzsparend auf der Schnittplatte zu verteilen.
 
-[Hier]() und [hier]() kannst du dir die Schnittpläne runterladen. Solltest du nicht wissen wie damit umzugehen ist, frage am besten
+[Hier](./assets/lasercutter/box_schnittplan.svg) kannst du dir die Schnittpläne runterladen. Solltest du nicht wissen wie damit umzugehen ist, frage am besten
 in deinem lokalen Makerspace nach und dir wird bestimmt weitergeholfen.
 
 ### Zusammensetzen der Box
@@ -112,3 +112,8 @@ Eine detalierte Version kann [hier](assets/images/schaltplan.pdf) geladen werden
 
 Das Display kann nun in die dafür vorgesehene Öffnung an der Frontseite des Gehäuses gesteckt werden.
 Sollte das Display zu locker sitzen, kann mit etwas Heißkleber nachgeholfen werden.
+
+### Den Arduino programmieren
+
+Um den Arduino zu programmieren braucht ist es am praktischsten die
+Arduino IDE zu benutzen.
