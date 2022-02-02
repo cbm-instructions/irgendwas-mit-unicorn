@@ -116,4 +116,16 @@ Sollte das Display zu locker sitzen, kann mit etwas Heißkleber nachgeholfen wer
 ### Den Arduino programmieren
 
 Um den Arduino zu programmieren braucht ist es am praktischsten die
-Arduino IDE zu benutzen.
+Arduino IDE zu benutzen. Dafür öffnet man unter `File >> open...` die `firmware.ino` in dem `firmware` Ordner in diesem Repository.
+
+Die Unterstützung für den Arduino Mega muss eventuell nachinstalliert werden. Dafür geht man in den Board Manager (`Tools >> Board >> Boards Manager...`) und installiert die `Arduino AVR Boards`.
+
+Damit das Projekt funktionieren müssen folgende Libraries über den Library Manager (`Tools >> Manage Libraries...`) installiert werden:
+
+- TimeLib (als Time gelistet)
+- DS1307RTC
+- Adafruit TFTLCD
+- Adafruit Keypad
+
+Nun kann das Programm kompiliert und auf den Arduino geladen werden.
+Jetzt wäre auch ein guter Zeitpunkt um die Funktionalität zu testen, bevor im nächsten Schritt alles zusammengesetzt wird.
