@@ -129,3 +129,16 @@ Damit das Projekt funktionieren müssen folgende Libraries über den Library Man
 
 Nun kann das Programm kompiliert und auf den Arduino geladen werden.
 Jetzt wäre auch ein guter Zeitpunkt um die Funktionalität zu testen, bevor im nächsten Schritt alles zusammengesetzt wird.
+
+## Ausblick
+
+Erweitern könnte man die Greenbox mit invidivuellen Verbrauchszielen, mit denen der Nutzer tracken kann,
+ob er sein aktuelles Verbrauchsziel erreicht.
+Auch kann man diese Daten künftig über das Wlan in ein übergreifenderes System übertragen.
+
+Außerdem könnten dem Nutzer verschiedene Fragen gestellt werden, die zu beantworten sind bevor der Countdown startet. Dies gewährleistet, dass
+man immer aktiv lesen muss und das Öffnen der Box nicht zur Gewohnheit wird.
+
+Eine andere Erweiterungsmöglichkeit wäre, äußere Gegebenheiten wie die Jahreszeit mit einzubeziehen und beispielsweise im Winter eine
+Fahrt mehr zu erlauben bevor der Tag rot markiert wird.
+Eine Notfalloption, mit der man den Schlüssel ohne 10 Sekunden Wartezeit erhält sollte auch noch hinzugefügt werden.
