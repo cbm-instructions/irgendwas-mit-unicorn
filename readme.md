@@ -26,6 +26,7 @@ farbige LED wird dem Nutzer ein Feedback zu seinem Fahrverhalten gegeben.
 - Steuerbarer Elektromagnet
 - 2x Holzstab 80mm & 4mmØ
 - 4x4 Tastenfeld
+- DS1307 Realtime Clock mit I2C Schnittstelle
 
 ### Werkzeug
 
@@ -61,7 +62,7 @@ kleinen Holzstab zurechtschneiden. Hier empfiehlt sich dieselbe Länge wie die
 Bodenplatte, sprich 8 cm.
 
 Danach steckt man zunächst in die Bodenplatte die Seitenwände und die zwei
-Holzstäbe durch die Löcher. Der hintere Stab wird verklebt, um eine maximale Öffnung der späteren Klappe sicherzustellen.
+Holzstäbe durch die Löcher. Der hintere Stab wird mit dem Gehäuse verklebt. Er verhindert das die Klappe später zu weit aufgeht.
 
 ![Verklebung der Stangen](./assets/images/stangen.jpeg)
 
@@ -71,7 +72,7 @@ An dem vorderen Stab wir die Klappe mit Heißkleber befestigt. Jetzt lässt sich
 ![Klappmechanismus](./assets/videos/Klappe.mp4)
 
 Jetzt ist es an der Zeit die Trennwand zwischen der Elektronik und der Schlüsselkammer
-einzkleben. Diese wird so angebracht das sie den Schlitz an der Vorderseite nicht blockiert.
+einzkleben. Diese wird so angebracht das sie den Schlitz für das Keypadkabel an der Vorderseite nicht blockiert.
 
 **Achtung:** Rückwand und Deckel werden erst mal nicht befestigt, damit es nicht zu kompliziert wird die Elektronik einzubauen.
 
@@ -110,9 +111,6 @@ Anstelle eines Breadboards können die Kabel auch einfach miteinander verlötet 
 
 Eine detalierte Version kann [hier](assets/images/schaltplan.pdf) geladen werden.
 
-Das Display kann nun in die dafür vorgesehene Öffnung an der Frontseite des Gehäuses gesteckt werden.
-Sollte das Display zu locker sitzen, kann mit etwas Heißkleber nachgeholfen werden.
-
 ### Den Arduino programmieren
 
 Um den Arduino zu programmieren braucht ist es am praktischsten die
@@ -129,6 +127,28 @@ Damit das Projekt funktionieren müssen folgende Libraries über den Library Man
 
 Nun kann das Programm kompiliert und auf den Arduino geladen werden.
 Jetzt wäre auch ein guter Zeitpunkt um die Funktionalität zu testen, bevor im nächsten Schritt alles zusammengesetzt wird.
+
+### Alles zusammenbringen
+
+Das Display kann nun in die dafür vorgesehene Öffnung an der Frontseite des Gehäuses gesteckt werden.
+Sollte das Display zu locker sitzen, kann mit etwas Heißkleber nachgeholfen werden.
+
+In der linken Seitenplatte ist ein Loch gelassen worden, dass für die Stromzufuhr genutzt werden kann. Wer es besonders schön haben will, kann an dieser Stelle einen Barrelplug einbauen. Je nach Variante müsste dafür noch das Schnittmuster für den Lasercutter angepasst werden.
+
+![Barrel Plug](./assets/images/barrel_plug.jpeg)
+
+## Funktionsweise
+
+Die Greenbox kann nun eingeschaltet werden, indem einfach nur das Netzteil in die Öffnung gesteckt wird. Der Bildschirm sollte aufleuchten und den Nutzer mit einem Baum- Screensaver begrüßen.
+Wird eine Taste gedrückt, wird auch schon die erste Frage angezeigt.
+
+In der Leiste unten im Display werden 29-31 Zellen angezeigt, die den Verbrauch im aktuellen Monat bewertet. Je roter die Farbe, umso mehr hat der Nutzer sein Auto an diesem Tag benutzt.
+
+Zusätzlich verändert der Baum der in inaktiven Zeiten angezeigt wird seine Farbe und Größe desto öfter der Schlüssel entnommen wird. Da immer nur die bisherigen Tage eines Monats berücksichtigt werden, ist es möglich den Baum wieder zum positiven zu beeinflussen, wenn man auf das Auto verzichtet.
+
+Die möglichen Eingaben auf dem Tastenfeld werden jederzeit angezeigt.
+Bevor das Schlüsselfach geöffnet wird, werden dem Benutzer ein paar Fragen gestellt.
+Nachdem der Schlüssel entnommen wurde, muss das Fach wieder geschlossen werden. Dazu reicht es, die Tür wieder so weit hoch zu schieben, dass sie magnetisch angezogen wird.
 
 ## Ausblick
 
