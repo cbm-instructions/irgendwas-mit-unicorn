@@ -66,7 +66,7 @@ Für den Bau unseres Projekts haben wir uns für einen Arduino Mega 2560 entschi
 ### Zuschneiden der Box
 
 Als erstes brauchen wir die Box selbst, bevor wir uns um die Elektronik kümmern können. Hierfür eignet sich eine simple Box aus Sperrholz, die wir mit einem Lasercutter zuschneiden.
-Den groben Aufbau der Box und den richtigen Maßen habeb wir mit der Webseite [Boxes.py](https://www.festi.info/boxes.py/) erstellt, den wir dann mit Inkscape bearbeitet um die entsprechenden Löcher und Schlitze ergänzt haben. Falls du jedoch Änderungen vornehmen willst, funktioniert jeder Vektorgrafikeditor.
+Den groben Aufbau der Box und den richtigen Maßen haben wir mit der Webseite [Boxes.py](https://www.festi.info/boxes.py/) erstellt, den wir dann mit Inkscape bearbeitet und um die entsprechenden Löcher und Schlitze ergänzt haben. Falls du jedoch Änderungen vornehmen willst, funktioniert jeder Vektorgrafikeditor.
 Um möglichst wenig Sperrholz zu verbrauchen, haben wir versucht, die einzelnen Elemente möglichst platzsparend auf der Schnittplatte zu verteilen.
 
 [Hier](./assets/lasercutter/box_schnittplan.svg) kannst du dir die Schnittpläne runterladen. Solltest du nicht wissen wie damit umzugehen ist, frage am besten in deinem lokalen Makerspace nach und dir wird bestimmt weitergeholfen.
@@ -155,7 +155,7 @@ Hier sieht man die Verkabelung von oben:
 
 ![bild von oben](./assets/images/ansichtvonoben.jpg)
 
-Ist diese alles geschehen, können nun die restlichen Wände und die Decke der Box befestigt werden. 
+Ist dies alles geschehen, können nun die restlichen Wände und die Decke der Box befestigt werden. 
 Am Ende haben wir eine kleine schicke Box:
 
 ![Box](./assets/images/uebersicht.jpeg)
