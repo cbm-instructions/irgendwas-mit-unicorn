@@ -66,11 +66,10 @@ Danach steckt man zunächst in die Bodenplatte die Seitenwände und die zwei Hol
 
 An dem vorderen Stab wir die Klappe mit Heißkleber befestigt. Jetzt lässt sich die Box öffnen und schließen.
 
-![Klappmechanismus](./assets/videos/Klappe.mp4)
+<!--![Klappmechanismus](./assets/videos/Klappe.mp4)-->
 
-<video width="420" height="340" controls>
-  <source src="./assets/videos/Klappe.mp4" type="video/mp4">
-</video>
+https://user-images.githubusercontent.com/18445038/152420676-5b517f7c-18dc-4e0e-9530-cd7161e39059.mp4
+
 
 Jetzt ist es an der Zeit, die Trennwand zwischen der Elektronik und der Schlüsselkammer einzukleben. Diese wird so angebracht, dass sie den Schlitz für das Keypadkabel an der Vorderseite nicht blockiert.
 
@@ -129,14 +128,6 @@ Nun kann das Programm kompiliert und auf den Arduino geladen werden. Hierzu muss
 
 Spätestens jetzt wäre ein guter Zeitpunkt, um alle Komponenten und die Software auf Funktionalität zu testen, bevor alles zusammengesetzt wird.
 In unserem Fall haben wir die Elektronik vor dem Einsetzen in die Box getestet.
-
-<!--Hier kann man unseren Test der Komponenten sehen:
-
-![Komponententest](./assets/videos/Klappe.mp4)
-
-<video width="420" height="340" controls>
-  <source src="./assets/videos/Klappe.mp4" type="video/mp4">
-</video>-->
 
 Das Display kann nun in die dafür vorgesehene Öffnung an der Frontseite des Gehäuses gesteckt werden.
 Sollte das Display zu locker sitzen, kann mit etwas Heißkleber nachgeholfen werden. Genauso kann mit einer Feile nachgeholfen werden, sollte die Öffnung etwas zu eng ausfallen.
