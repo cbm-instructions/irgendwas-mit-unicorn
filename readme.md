@@ -99,7 +99,7 @@ der Klappe befestigt werden muss.
 Den Elektro- wie den Knopfmagneten kann man einfach mit Heißkleber befestigen. Dabei sollte auf einen kleinen Abstand geachtet werden, um bei Bedarf Puffermaterial einzusetzen. Das kann nötig sein, da der Elektromagnet nicht allzu stark ist und ansonsten leicht von dem
 Knopfmagneten überlastet werden kann.
 
-Es gibt zwei Stellen, an denen der Magnet befestigt werden kann, in der Grafik mit einem roten X markiert Entsprechend muss unten auf derselben Seite an der Klappe der Knopfmagnet befestigt werden (blaues Kreuz).
+Es gibt zwei Stellen, an denen der Magnet befestigt werden kann, in der Grafik mit einem roten X markiert. Entsprechend muss unten auf derselben Seite an der Klappe der Knopfmagnet befestigt werden (blaues Kreuz).
 
 ![Magnet Befestigungspunkte](./assets/images/magnet_position.svg)
 
