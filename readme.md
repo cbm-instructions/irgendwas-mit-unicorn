@@ -65,7 +65,7 @@ Für den Bau unseres Projekts haben wir uns für einen Arduino Mega 2560 entschi
 
 ### Zuschneiden der Box
 
-Als erstes brauchen wir die Box selbst, bevor wir uns um die Elektronik kümmern können. Hierfür eignet sich eine simple Box aus Sperrholz, die wir mit einem Lasercutter zuschneiden.
+Als Erstes brauchen wir die Box selbst, bevor wir uns um die Elektronik kümmern können. Hierfür eignet sich eine simple Box aus Sperrholz, die wir mit einem Lasercutter zuschneiden.
 Den groben Aufbau der Box und den richtigen Maßen haben wir mit der Webseite [Boxes.py](https://www.festi.info/boxes.py/) erstellt, den wir dann mit Inkscape bearbeitet und um die entsprechenden Löcher und Schlitze ergänzt haben. Falls du jedoch Änderungen vornehmen willst, funktioniert jeder Vektorgrafikeditor.
 Um möglichst wenig Sperrholz zu verbrauchen, haben wir versucht, die einzelnen Elemente möglichst platzsparend auf der Schnittplatte zu verteilen.
 
@@ -77,7 +77,7 @@ Nachdem die Holzteile ausgeschnitten wurden, kann man die Box nun größtenteils
 
 Bevor man die einzelnen Elemente ineinanderstecken kann, muss man davor noch den kleinen Holzstab zurechtschneiden. Hier empfiehlt sich dieselbe Länge wie die Bodenplatte, sprich 8 cm.
 
-Danach steckt man zunächst in die Bodenplatte die Seitenwände und die zwei Holzstäbe durch die Löcher. Der hintere Stab wird mit dem Gehäuse verklebt. Er verhindert, dass die Klappe später zu weit aufgeht. Wie das ungefähr aussehen soll, sieht man in den folgenden Bildern:
+Danach steckt man zunächst in die Bodenplatte, die Seitenwände und die zwei Holzstäbe durch die Löcher. Der hintere Stab wird mit dem Gehäuse verklebt. Er verhindert, dass die Klappe später zu weit aufgeht. Wie das ungefähr aussehen soll, sieht man in den folgenden Bildern:
 
 ![Verklebung der Stangen](./assets/images/stangen.jpeg)
 ![Holzbox](./assets/images/Holzbox.jpg)
@@ -99,7 +99,7 @@ der Klappe befestigt werden muss.
 Den Elektro- wie den Knopfmagneten kann man einfach mit Heißkleber befestigen. Dabei sollte auf einen kleinen Abstand geachtet werden, um bei Bedarf Puffermaterial einzusetzen. Das kann nötig sein, da der Elektromagnet nicht allzu stark ist und ansonsten leicht von dem
 Knopfmagneten überlastet werden kann.
 
-Es gibt zwei Stellen, an denen der Magnet befestigt werden kann, in der Grafik mit einem roten X makiert. Entsprechend muss unten auf derselben Seite an der Klappe der Knopfmagnet befestigt werden (blaues Kreuz).
+Es gibt zwei Stellen, an denen der Magnet befestigt werden kann, in der Grafik mit einem roten X markiert Entsprechend muss unten auf derselben Seite an der Klappe der Knopfmagnet befestigt werden (blaues Kreuz).
 
 ![Magnet Befestigungspunkte](./assets/images/magnet_position.svg)
 
@@ -118,11 +118,11 @@ Es kann auf beliebige Arten verklebt werden, wir haben uns für doppelseitiges K
 ### Verkabelung
 
 Jetzt können schon alle elektronischen Teile miteinander verkabelt werden. Wir benutzen hier ein Breadboard, aber
-anstelle dessen können die Kabel auch einfach miteinander verlötet werden. Hier ist eine grobe Übersicht, wie die einzelnen Teile mit welchen Ports am Arduino verbunden werden müssen. 
+anstelle dessen können die Kabel auch einfach miteinander verlötet werden. Hier ist eine grobe Übersicht, wie die einzelnen Komponenten an welche Ports am Arduino angeschlossen werden müssen. 
 
 ![Schaltplan](./assets/images/schaltplan.png)
 
-Eine detalierte Version von diesem Schaltplan kann [hier](assets/images/schaltplan.pdf) heruntergeladen werden.
+Eine detaillierte Version von diesem Schaltplan kann [hier](assets/images/schaltplan.pdf) heruntergeladen werden.
 
 ### Den Arduino programmieren
 
@@ -167,15 +167,15 @@ Wird eine Taste gedrückt, wird auch schon die erste Frage angezeigt.
 
 In der Leiste unten im Display werden 29-31 Zellen angezeigt, die den Verbrauch im aktuellen Monat bewertet. Je roter die Farbe, umso mehr hat der Nutzer sein Auto an diesem Tag benutzt.
 
-Zusätzlich verändert der Baum, der in inaktiven Zeiten angezeigt wird, seine Farbe und Größe desto öfter der Schlüssel entnommen wird. Da immer nur die bisherigen Tage eines Monats berücksichtigt werden, ist es möglich den Baum wieder zum positiven zu beeinflussen, wenn man auf das Auto verzichtet.
+Zusätzlich verändert der Baum, der in inaktiven Zeiten angezeigt wird, seine Farbe und Größe je öfter der Schlüssel entnommen wird. Da immer nur die bisherigen Tage eines Monats berücksichtigt werden, ist es möglich den Baum wieder zum positiven zu beeinflussen, wenn man auf das Auto verzichtet.
 
 Die möglichen Eingaben auf dem Tastenfeld werden jederzeit angezeigt.
 Bevor das Schlüsselfach geöffnet wird, werden dem Benutzer ein paar Fragen gestellt.
-Nachdem der Schlüssel entnommen wurde, muss das Fach wieder geschlossen werden. Dazu reicht es, die Tür wieder so weit hoch zu schieben, dass sie magnetisch angezogen wird.
+Nachdem der Schlüssel entnommen wurde, muss das Fach wieder geschlossen werden. Dazu reicht es, die Tür wieder so weit hochzuschieben, dass sie magnetisch angezogen wird.
 
 ## Ausblick
 
-Erweitern könnte man die Greenbox mit invidivuellen Verbrauchszielen, mit denen der Nutzer tracken kann,
+Erweitern könnte man die Greenbox mit individuellen Verbrauchszielen, mit denen der Nutzer tracken kann,
 ob er sein aktuelles Verbrauchsziel erreicht.
 Auch kann man diese Daten künftig über das Wlan in ein übergreifenderes System übertragen.
 
