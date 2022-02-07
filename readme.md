@@ -1,7 +1,15 @@
-# Greenbox
+---
+title: "Greenbox"
+categories: instructions
+layout: post
+date: 2022-02-07 17:33:20 +0200
+---
+
+Greenbox
 
 ## Inhaltsverzeichnis
 
+<!-- TOC -->
 * [Vorbereitung](#vorbereitung)
   + [Material](#material)
   + [Werkzeug](#werkzeug)
@@ -17,8 +25,9 @@
   + [Alles zusammenbringen](#alles-zusammenbringen)
 * [Funktionsweise](#funktionsweise)
 * [Ausblick](#ausblick)
+<!-- TOC -->
 
-![Header](./assets/images/uebersicht.jpeg)
+![Header](/images/irgendwas-mit-unicorns/uebersicht.jpeg)
 
 Dieses Semester war unsere Challenge: „Wie können wir mit intelligenten Objekten dazu beitragen, dass Menschen über den Klimawandel Bescheid wissen und entsprechend handeln?“ 
 
@@ -69,7 +78,7 @@ Als Erstes brauchen wir die Box selbst, bevor wir uns um die Elektronik kümmern
 Den groben Aufbau der Box und den richtigen Maßen haben wir mit der Webseite [Boxes.py](https://www.festi.info/boxes.py/) erstellt, den wir dann mit Inkscape bearbeitet und um die entsprechenden Löcher und Schlitze ergänzt haben. Falls du jedoch Änderungen vornehmen willst, funktioniert jeder Vektorgrafikeditor.
 Um möglichst wenig Sperrholz zu verbrauchen, haben wir versucht, die einzelnen Elemente möglichst platzsparend auf der Schnittplatte zu verteilen.
 
-[Hier](./assets/lasercutter/box_schnittplan.svg) kannst du dir die Schnittpläne runterladen. Solltest du nicht wissen wie damit umzugehen ist, frage am besten in deinem lokalen Makerspace nach und dir wird bestimmt weitergeholfen.
+[Hier](/images/irgendwas-mit-unicorns/lasercutter/box_schnittplan.svg) kannst du dir die Schnittpläne runterladen. Solltest du nicht wissen wie damit umzugehen ist, frage am besten in deinem lokalen Makerspace nach und dir wird bestimmt weitergeholfen.
 
 ### Zusammensetzen der Box
 
@@ -79,8 +88,8 @@ Bevor man die einzelnen Elemente ineinanderstecken kann, muss man davor noch den
 
 Danach steckt man zunächst in die Bodenplatte, die Seitenwände und die zwei Holzstäbe durch die Löcher. Der hintere Stab wird mit dem Gehäuse verklebt. Er verhindert, dass die Klappe später zu weit aufgeht. Wie das ungefähr aussehen soll, sieht man in den folgenden Bildern:
 
-![Verklebung der Stangen](./assets/images/stangen.jpeg)
-![Holzbox](./assets/images/Holzbox.jpg)
+![Verklebung der Stangen](/images/irgendwas-mit-unicorns/stangen.jpeg)
+![Holzbox](/images/irgendwas-mit-unicorns/Holzbox.jpg)
 
 An dem vorderen Stab wir die Klappe mit Heißkleber befestigt. Jetzt lässt sich die Box öffnen und schließen.
 
@@ -101,11 +110,11 @@ Knopfmagneten überlastet werden kann.
 
 Es gibt zwei Stellen, an denen der Magnet befestigt werden kann, in der Grafik mit einem roten X markiert. Entsprechend muss unten auf derselben Seite an der Klappe der Knopfmagnet befestigt werden (blaues Kreuz).
 
-![Magnet Befestigungspunkte](./assets/images/magnet_position.svg)
+![Magnet Befestigungspunkte](/images/irgendwas-mit-unicorns/magnet_position.svg)
 
 So sieht der Magnet in unserem Beispiel aus: 
 
-![Magnet Ergebnis](./assets/images/elektromagnet.jpg)
+![Magnet Ergebnis](/images/irgendwas-mit-unicorns/elektromagnet.jpg)
 
 ### Das Tastenfeld anbringen
 
@@ -113,16 +122,16 @@ Nun können wir das Tastenfeld an das Gehäuse anbringen.
 Hierzu wird das flache Kabel des Tastenfelds durch den schmalen Schlitz am Gehäuse gesteckt.
 Es kann auf beliebige Arten verklebt werden, wir haben uns für doppelseitiges Klebeband entschieden. Wie das Tastenfeld dann am Gehäuse aussieht, sieht man in der folgenden Grafik:
 
-![Tastenfeld in der Box](./assets/images/tastenfeld.png)
+![Tastenfeld in der Box](/images/irgendwas-mit-unicorns/tastenfeld.png)
 
 ### Verkabelung
 
 Jetzt können schon alle elektronischen Teile miteinander verkabelt werden. Wir benutzen hier ein Breadboard, aber
 anstelle dessen können die Kabel auch einfach miteinander verlötet werden. Hier ist eine grobe Übersicht, wie die einzelnen Komponenten an welche Ports am Arduino angeschlossen werden müssen. 
 
-![Schaltplan](./assets/images/schaltplan.png)
+![Schaltplan](/images/irgendwas-mit-unicorns/schaltplan.png)
 
-Eine detaillierte Version von diesem Schaltplan kann [hier](assets/images/schaltplan.pdf) heruntergeladen werden.
+Eine detaillierte Version von diesem Schaltplan kann [hier](/images/irgendwas-mit-unicorns/schaltplan.pdf) heruntergeladen werden.
 
 ### Den Arduino programmieren
 
@@ -149,16 +158,16 @@ Sollte das Display zu locker sitzen, kann mit etwas Heißkleber nachgeholfen wer
 
 In der linken Seitenplatte ist ein Loch gelassen worden, das für die Stromzufuhr genutzt werden kann. Wer es besonders schön haben will, kann an dieser Stelle einen Barrelplug einbauen. Je nach Variante müsste dafür noch das Schnittmuster für den Lasercutter angepasst werden.
 
-![Barrel Plug](./assets/images/barrel_plug.jpeg)
+![Barrel Plug](/images/irgendwas-mit-unicorns/barrel_plug.jpeg)
 
 Hier sieht man die Verkabelung von oben:
 
-![bild von oben](./assets/images/ansichtvonoben.jpg)
+![bild von oben](/images/irgendwas-mit-unicorns/ansichtvonoben.jpg)
 
 Ist dies alles geschehen, können nun die restlichen Wände und die Decke der Box befestigt werden. 
 Am Ende haben wir eine kleine schicke Box:
 
-![Box](./assets/images/uebersicht.jpeg)
+![Box](/images/irgendwas-mit-unicorns/uebersicht.jpeg)
 
 ## Funktionsweise
 
